@@ -1,0 +1,13 @@
+Cross Correlation of Goals and Winning Percentage: 0.9798836752860556
+Cross Correlation of Goals Allowed and Winning Percentage: -0.22167301418437493
+Cross Correlation of Faceoff Win and Winning Percentage: 0.33214731435476763
+Cross Correlation of Manup Goal and Winning Percentage: 0.5222750562171754
+Cross Correlation of Mandown Goal and Winning Percentage: 0.13034298727617832
+Cross Correlation of Scoring Margin and Winning Percentage: 0.8052086091517485
+Cross Correlation of Penalties and Winning Percentage: 0.7642086450734586
+Cross Correlation of Turnovers and Winning Percentage: -0.3406820688198059
+Cross Correlation of Caused Turnovers and Winning Percentage: 0.10504102224428431
+Cross Correlation of Shot Percentage and Winning Percentage: 0.8608439617241355
+Cross Correlation of GB and Winning Percentage: 0.5693882576489452
+Cross Correlation of Assists and Winning Percentage: 0.9668209861039693
+Cross Correlation of Saves and Winning Percentage: 0.0421006571905205
