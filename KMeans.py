@@ -33,6 +33,7 @@ numberOfCols = 0
 whatCluster = dict()
 clusters = list(list())
 combinedRows = list()
+whatTeam = dict()
 #euclideanDist = [[]]
 #rowsWithClassifier = 0
 
@@ -46,6 +47,7 @@ a header on the top
 """
 def openCSVFile(fileName):
     listOfData = list()
+    teamRow = dict()
     with open(fileName, newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='|')
         rowNum = 0
@@ -55,7 +57,8 @@ def openCSVFile(fileName):
         skipRows = set()
         for row in reader:
             listOfData.append(list())
-            for val in range(0,colNum):
+            teamRow[rowNum] = row[0]
+            for val in range(1,colNum):
                 try:
                     listOfData[rowNum].append(float(row[val]))
                 except ValueError:
@@ -68,9 +71,9 @@ def openCSVFile(fileName):
         for rowRemove in reversed(skipRows):
             listOfData.pop(rowRemove)
 
-    return listOfData, rowNum, colNum
+    return listOfData, rowNum, colNum, teamRow
 
-listOfData, totalNumberOfVals, numberOfCols = openCSVFile('d1LaxRankings.csv')
+listOfData, totalNumberOfVals, numberOfCols, whatTeam = openCSVFile('d1LaxRankings.csv')
 
 """
 Finds the mininum and maximum value of the attribute (column) given
@@ -375,7 +378,7 @@ def printKMeansCluster():
     bestSSE, bestCenters, bestWhatPoint = genericKMeans()
     print("The best SSE: " + str(bestSSE))
     for point in bestWhatPoint.keys():
-        print(str(point) + " center: " + str(bestWhatPoint.get(point)))
+        print(str(whatTeam[point]) + " center: " + str(bestWhatPoint.get(point)))
     #graphClusters(bestWhatPoint)
 
 printKMeansCluster()
