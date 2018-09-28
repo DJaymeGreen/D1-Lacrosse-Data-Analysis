@@ -1,0 +1,71 @@
+Albany (NY) center: 0
+Yale center: 0
+Princeton center: 1
+Duke center: 0
+Cornell center: 0
+Loyola Maryland center: 0
+Virginia center: 1
+Penn St. center: 0
+Colgate center: 0
+Brown center: 1
+Quinnipiac center: 1
+Johns Hopkins center: 0
+Maryland center: 0
+Bucknell center: 0
+Massachusetts center: 0
+Robert Morris center: 0
+Jacksonville center: 1
+Canisius center: 0
+High Point center: 1
+Denver center: 0
+Bryant center: 0
+Syracuse center: 0
+Mt. St. Mary's center: 1
+Rutgers center: 0
+Georgetown center: 0
+Sacred Heart center: 1
+North Carolina center: 0
+Harvard center: 2
+Villanova center: 2
+Richmond center: 0
+Lehigh center: 0
+Delaware center: 2
+Drexel center: 2
+Siena center: 1
+Vermont center: 0
+Detroit Mercy center: 0
+Monmouth center: 0
+Michigan center: 2
+Hobart center: 0
+Notre Dame center: 0
+Boston U. center: 1
+UMass Lowell center: 1
+Saint Joseph's center: 0
+Hartford center: 2
+St. John's (NY) center: 2
+Penn center: 2
+Providence center: 2
+Navy center: 2
+Army West Point center: 0
+Hampton center: 1
+Ohio St. center: 2
+Stony Brook center: 2
+Towson center: 2
+Furman center: 2
+Fairfield center: 2
+Manhattan center: 2
+Cleveland St. center: 2
+VMI center: 2
+Hofstra center: 2
+Dartmouth center: 2
+Mercer center: 2
+Marist center: 2
+Binghamton center: 2
+Air Force center: 2
+Marquette center: 2
+Bellarmine center: 2
+Lafayette center: 2
+Wagner center: 2
+UMBC center: 2
+Holy Cross center: 2
+NJIT center: 2
