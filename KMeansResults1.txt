@@ -1,0 +1,78 @@
+The best SSE: 1650.6583160525454
+Air Force center: 0
+Albany (NY) center: 1
+Army West Point center: 2
+Bellarmine center: 0
+Binghamton center: 0
+Boston U. center: 2
+Brown center: 2
+Bryant center: 2
+Bucknell center: 2
+Canisius center: 2
+Cleveland St. center: 0
+Colgate center: 2
+Cornell center: 1
+Dartmouth center: 0
+Delaware center: 2
+Denver center: 2
+Detroit Mercy center: 2
+Drexel center: 0
+Duke center: 1
+Fairfield center: 0
+Furman center: 0
+Georgetown center: 2
+Hampton center: 2
+Hartford center: 0
+Harvard center: 2
+High Point center: 2
+Hobart center: 2
+Hofstra center: 0
+Holy Cross center: 0
+Jacksonville center: 2
+Johns Hopkins center: 2
+Lafayette center: 0
+Lehigh center: 2
+Loyola Maryland center: 1
+Manhattan center: 0
+Marist center: 0
+Marquette center: 0
+Maryland center: 2
+Massachusetts center: 2
+Mercer center: 0
+Michigan center: 0
+Monmouth center: 2
+Mt. St. Mary's center: 2
+Navy center: 2
+NJIT center: 0
+North Carolina center: 2
+Notre Dame center: 2
+Ohio St. center: 2
+Penn center: 0
+Penn St. center: 1
+Princeton center: 1
+Providence center: 0
+Quinnipiac center: 2
+Richmond center: 2
+Robert Morris center: 2
+Rutgers center: 2
+Sacred Heart center: 2
+Saint Joseph's center: 2
+Siena center: 2
+St. John's (NY) center: 2
+Stony Brook center: 0
+Syracuse center: 2
+Towson center: 0
+UMass Lowell center: 2
+UMBC center: 0
+Vermont center: 2
+Villanova center: 2
+Virginia center: 1
+VMI center: 0
+Wagner center: 0
+Yale center: 1
+Group 0 averages a win percentage of 12.936400000000003
+Group 0 median win percentage is: 12.85
+Group 1 averages a win percentage of 21.650000000000002
+Group 1 median win percentage is: 21.475
+Group 2 averages a win percentage of 16.85842105263158
+Group 2 median win percentage is: 16.939999999999998

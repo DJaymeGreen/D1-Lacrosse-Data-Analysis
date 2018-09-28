@@ -14,6 +14,7 @@ Numpy is used to allow floats into Matplotlib
 """
 import matplotlib.pyplot as mpl
 from mpl_toolkits.mplot3d import Axes3D
+import statistics
 import csv
 import math
 import numpy as np
@@ -58,7 +59,7 @@ def openCSVFile(fileName):
         for row in reader:
             listOfData.append(list())
             teamRow[rowNum] = row[0]
-            for val in range(1,colNum):
+            for val in range(1,colNum-1):
                 try:
                     listOfData[rowNum].append(float(row[val]))
                 except ValueError:
@@ -369,6 +370,24 @@ def genericKMeans():
     # Use the best set of prototypes
     return (bestSSE, bestCenters, bestWhatPoint)
 
+"""
+Finds the average win percentage of each center
+"""
+def findAverageWinPercentagePerCenter(bestWhatPoint):
+    numberOfGroups = max(list(bestWhatPoint.values()))+1
+    averageWinPercent = [0] * numberOfGroups
+    numberOfTeamsInGroup = [0] * numberOfGroups
+    medianWinPercent = list()
+    for x in range(0,numberOfGroups):
+        medianWinPercent.append(list())
+    for row in bestWhatPoint.keys():
+        averageWinPercent[bestWhatPoint[row]] += listOfData[row][-1]
+        medianWinPercent[bestWhatPoint[row]].append(listOfData[row][-1])
+        numberOfTeamsInGroup[bestWhatPoint[row]] += 1
+    for group in range(0,len(averageWinPercent)):
+        averageWinPercent[group] /= numberOfTeamsInGroup[group]
+        print("Group " + str(group) + " averages a win percentage of " + str(averageWinPercent[group]))
+        print("Group " + str(group) + " median win percentage is: " + str(statistics.median(medianWinPercent[group])))
 
 """
 Calls the function that does the KMeans and prints out the points and what
@@ -379,6 +398,7 @@ def printKMeansCluster():
     print("The best SSE: " + str(bestSSE))
     for point in bestWhatPoint.keys():
         print(str(whatTeam[point]) + " center: " + str(bestWhatPoint.get(point)))
+    findAverageWinPercentagePerCenter(bestWhatPoint)
     #graphClusters(bestWhatPoint)
 
 printKMeansCluster()
