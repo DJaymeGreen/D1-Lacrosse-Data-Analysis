@@ -378,12 +378,15 @@ def findAverageWinPercentagePerCenter(bestWhatPoint):
     averageWinPercent = [0] * numberOfGroups
     numberOfTeamsInGroup = [0] * numberOfGroups
     medianWinPercent = list()
+
     for x in range(0,numberOfGroups):
         medianWinPercent.append(list())
+
     for row in bestWhatPoint.keys():
         averageWinPercent[bestWhatPoint[row]] += listOfData[row][-1]
         medianWinPercent[bestWhatPoint[row]].append(listOfData[row][-1])
         numberOfTeamsInGroup[bestWhatPoint[row]] += 1
+
     for group in range(0,len(averageWinPercent)):
         averageWinPercent[group] /= numberOfTeamsInGroup[group]
         print("Group " + str(group) + " averages a win percentage of " + str(averageWinPercent[group]))
@@ -393,8 +396,19 @@ def findAverageWinPercentagePerCenter(bestWhatPoint):
 Creates a CSV file for each cluster containing all of the teams and
 statistics of the teams. These CSV files will be analyzed further separatly
 """
-def writeCSVFileForEachCluster():
-    pass
+def writeCSVFileForEachCluster(bestWhatPoint):
+    numberOfGroups = max(list(bestWhatPoint.values()))+1
+    clusterData = list()
+    for x in range(0,numberOfGroups):
+        clusterData.append(list())
+    for row in bestWhatPoint.keys():
+        clusterData[bestWhatPoint[row]].append(list())
+        clusterData[bestWhatPoint[row]][len(clusterData[bestWhatPoint[row]])-1].append(whatTeam[row])
+        for data in listOfData[row]:
+            clusterData[bestWhatPoint[row]][len(clusterData[bestWhatPoint[row]])-1].append(data)
+
+    #For each list in clusterData, create and write to CSV file
+    print(numberOfGroups)
 
 """
 Calls the function that does the KMeans and prints out the points and what
@@ -406,6 +420,7 @@ def printKMeansCluster():
     for point in bestWhatPoint.keys():
         print(str(whatTeam[point]) + " center: " + str(bestWhatPoint.get(point)))
     findAverageWinPercentagePerCenter(bestWhatPoint)
+    writeCSVFileForEachCluster(bestWhatPoint)
     #graphClusters(bestWhatPoint)
 
 printKMeansCluster()
