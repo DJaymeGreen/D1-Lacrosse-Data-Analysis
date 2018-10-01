@@ -390,6 +390,13 @@ def findAverageWinPercentagePerCenter(bestWhatPoint):
         print("Group " + str(group) + " median win percentage is: " + str(statistics.median(medianWinPercent[group])))
 
 """
+Creates a CSV file for each cluster containing all of the teams and
+statistics of the teams. These CSV files will be analyzed further separatly
+"""
+def writeCSVFileForEachCluster():
+    pass
+
+"""
 Calls the function that does the KMeans and prints out the points and what
 cluster they belong to
 """
