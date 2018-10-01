@@ -59,7 +59,7 @@ def openCSVFile(fileName):
         for row in reader:
             listOfData.append(list())
             teamRow[rowNum] = row[0]
-            for val in range(1,colNum-1):
+            for val in range(1,colNum):
                 try:
                     listOfData[rowNum].append(float(row[val]))
                 except ValueError:
@@ -408,7 +408,12 @@ def writeCSVFileForEachCluster(bestWhatPoint):
             clusterData[bestWhatPoint[row]][len(clusterData[bestWhatPoint[row]])-1].append(data)
 
     #For each list in clusterData, create and write to CSV file
-    print(numberOfGroups)
+    for cluster in range(0,numberOfGroups):
+        with open('laxD1Cluster' + str(cluster) + '.csv', 'w') as f:
+            for team in clusterData[cluster]:
+                for stat in team:
+                    f.write(str(stat) + ',')
+                f.write('\n')
 
 """
 Calls the function that does the KMeans and prints out the points and what
